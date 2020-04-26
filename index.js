@@ -40,7 +40,7 @@ renderArray(){
   
   return <div >
   <ul> 
-    {this. state. array. map(data => <li >{data}</li>  )}
+    {this. state. array. map(data => <li key={data}>{data}</li>  )}
   </ul>
   </div >;
   // <ul></ul >
