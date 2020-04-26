@@ -6,7 +6,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 class App extends Component {
   state={
-    count:0
+    count:0,
+    array: [],
+    imageUrl:"https://picsum.photos/200"
   };
 
 formatCount(){
@@ -34,9 +36,9 @@ count : this.state. count -1
   render() {
     return (
       <div>
-        <h1>React Fundamentals</h1>
+        <h1>React Fundamentals Hands - on</h1>
 <div> 
-    <h3 className="header">
+    <h3 className="header mt-5">
     Dynamic state updation, dynamic style updation, event handler & binding demo
     </h3>
 
@@ -46,7 +48,7 @@ count : this.state. count -1
     {this. formatCount()}
     </span >
     <br></br>
-    <button className ="btn btn-secondary"
+    <button className ="btn btn-secondary mt-3 "
     onClick={this. incrementCount}> 
     Increment
     </button>
@@ -69,6 +71,14 @@ count : this.state. count -1
             {}
         </li>
     </ul>
+</div>
+
+<div>
+    <h3 className ="header mt-3">
+    Rendering image in react
+    </h3>
+    <br></br>
+    <img src={this. state. imageUrl} alt=""/>
 </div>
 
 
