@@ -4,6 +4,7 @@ import Hello from './Hello';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import ReactPlayer from 'react-player';
+import Child from './childComponent.tsx';
 
 class App extends Component {
   state={
@@ -98,10 +99,14 @@ renderArray(){
     <ReactPlayer
     className ="mt-3"
      url={this. state. videoUrl} playing />
-  
 </div>
 
-
+<div>
+    <h3 className ="header mt-3">
+       Child Component demo
+    </h3>
+  
+</div>
 
 
       </div>
