@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import './style.css'
-import 'bootstrap/dist/css/bootstrap.css'
+import './style.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import ReactPlayer from 'react-player';
 
 class App extends Component {
   state={
     count:0,
     array: ['Data 1', 'Data 2', 'Data 3'],
-    imageUrl:"https://picsum.photos/200"
+    imageUrl:"https://picsum.photos/200",
+    videoUrl: "https://www.youtu.be/BWf-eARnf6U"
   };
 
 formatCount(){
@@ -43,7 +45,6 @@ renderArray(){
     {this. state. array. map(data => <li key={data}>{data}</li>  )}
   </ul>
   </div >;
-  // <ul></ul >
 }
   render() {
     return (
@@ -88,6 +89,16 @@ renderArray(){
     </h3>
     <br></br>
     <img src={this. state. imageUrl} alt=""/>
+</div>
+
+<div>
+    <h3 className ="header mt-3 ">
+        Embedding videos in React 
+    </h3>
+    <ReactPlayer
+    className ="mt-3"
+     url={this. state. videoUrl} playing />
+  
 </div>
 
 
