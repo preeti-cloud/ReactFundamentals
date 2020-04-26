@@ -37,7 +37,7 @@ count : this.state. count -1
         <h1>React Fundamentals</h1>
 <div> 
     <h3 className="header">
-    Dynamic state & styling changes demo
+    Dynamic state updation, dynamic style updation, event handler & binding demo
     </h3>
 
     The current state counter value is 
@@ -54,9 +54,21 @@ count : this.state. count -1
     <br></br>
     <button
     onClick={this. decrementCount}
-     className="btn btn-secondary">
+     className="btn btn-secondary mt-3">
     Decrement 
     </button>
+</div>
+
+<div>
+    <h3 className="header mt-3">
+    Rendering lists in React using map
+    </h3>
+
+    <ul>
+        <li>
+            {}
+        </li>
+    </ul>
 </div>
 
 
