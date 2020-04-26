@@ -14,9 +14,18 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
+        <h1>React Fundamentals</h1>
+<div> 
+    <h3 className="header">
+    Dunamic state change 
+    </h3>
+</div>
+
+
+
+
         <p>
-          Start editing to see some magic happen :)
+          Start editing to see some magi
         </p>
       </div>
     );
