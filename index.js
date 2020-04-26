@@ -20,13 +20,24 @@ dynamicStyling(){
   return classes ;
   }
 
+incrementCount = () =>{
+  this. setState ({count :
+  this. state. count + 1
+  });
+}
+
+decrementCount=()=>{
+  this. setState ({
+count : this.state. count -1
+  });
+}
   render() {
     return (
       <div>
         <h1>React Fundamentals</h1>
 <div> 
     <h3 className="header">
-    Dynamic state change 
+    Dynamic state & styling changes demo
     </h3>
 
     The current state counter value is 
@@ -36,8 +47,15 @@ dynamicStyling(){
     </span >
     <br></br>
     <button className ="btn btn-secondary"
-    onClick=""> 
+    onClick={this. incrementCount}> 
     Increment
+    </button>
+
+    <br></br>
+    <button
+    onClick={this. decrementCount}
+     className="btn btn-secondary">
+    Decrement 
     </button>
 </div>
 
