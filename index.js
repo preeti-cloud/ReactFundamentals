@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 class App extends Component {
   state={
     count:0,
-    array: [],
+    array: ['Data 1', 'Data 2', 'Data 3'],
     imageUrl:"https://picsum.photos/200"
   };
 
@@ -32,6 +32,18 @@ decrementCount=()=>{
   this. setState ({
 count : this.state. count -1
   });
+}
+
+renderArray(){
+  if (this.state.array.length===0)
+      {return "There is no data present";}
+  
+  return <div >
+  <ul> 
+    {this. state. array. map(data => <li >{data}</li>  )}
+  </ul>
+  </div >;
+  // <ul></ul >
 }
   render() {
     return (
@@ -63,14 +75,11 @@ count : this.state. count -1
 
 <div>
     <h3 className="header mt-3">
-    Rendering lists in React using map
+    Rendering lists in React using map & conditional rendering demo
     </h3>
-
-    <ul>
-        <li>
-            {}
-        </li>
-    </ul>
+    <div>
+        {this. renderArray()}
+    </div>
 </div>
 
 <div>
