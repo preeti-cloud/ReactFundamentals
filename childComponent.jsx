@@ -6,7 +6,8 @@ class Child extends Component {
   render(){
     return(
       <p className ="header">
-         I'm a child component.
+         I'm a child component with rank - 
+         {this. props. value} .
       </p>
     )
   }

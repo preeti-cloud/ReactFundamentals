@@ -4,14 +4,18 @@ import Hello from './Hello';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import ReactPlayer from 'react-player';
-import Child from './childComponent.tsx';
+import Child from './childComponent';
 
 class App extends Component {
   state={
     count:0,
     array: ['Data 1', 'Data 2', 'Data 3'],
     imageUrl:"https://picsum.photos/200",
-    videoUrl: "https://www.youtu.be/BWf-eARnf6U"
+    videoUrl: "https://www.youtu.be/BWf-eARnf6U",
+    childArray : [
+        {id:1,value: 'First'},
+         {id : 2, value : 'Second'}
+    ]
   };
 
 formatCount(){
@@ -103,9 +107,12 @@ renderArray(){
 
 <div>
     <h3 className ="header mt-3">
-       Child Component demo
+       Rendering Child Component demo
     </h3>
-  
+    {this.state.childArray.map (
+      child => <Child key ="child.id " 
+      value = {child.value}/>
+    )}
 </div>
 
 
