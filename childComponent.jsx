@@ -4,8 +4,24 @@ import ChildHeader from './childHeader';
 
 class Child extends Component {
 
-  render(){
+constructor (){
+  super();
+  console.log ('Constructor');
+}
 
+componentDidMount (){
+  console.log ('Mounted');
+}
+
+componentDidUpdate (){
+    console. log('Updated');
+}
+
+componentWillUnmount (){
+  console. log ('Unmounted');
+}
+  render(){
+console. log('Rendered' );
     // Argument destructuring demo below
     const {array, children ,value , onDelete ,id } =this.props;
     return (
