@@ -51,6 +51,13 @@ renderArray(){
   </ul>
   </div >;
 }
+
+handleDelete =(childId ) =>{
+  console.log ('clicked ', childId );
+  const updatedChildArray = this. state. childArray.filter(c=> c.id != childId);
+
+  this.setState({childArray :updatedChildArray });
+}
   render() {
     return (
       <div>
@@ -93,6 +100,7 @@ renderArray(){
     Rendering image in react
     </h3>
     <br></br>
+    This code displays a random image everytime.
     <img src={this. state. imageUrl} alt=""/>
 </div>
 
@@ -107,11 +115,16 @@ renderArray(){
 
 <div>
     <h3 className ="header mt-3">
-       Rendering Child Component demo
+       Rendering Child Component, using props and children attributes , passing data and event handling from child to parent
     </h3>
     {this.state.childArray.map (
-      child => <Child key ="child.id " 
-      value = {child.value}/>
+      child => <Child key ={child.id}
+      value = {child.value}
+      id= {child.id}
+      onDelete ={this.handleDelete}>
+          <h2> Title for child# {child.id}
+          </h2>
+      </Child>
     )}
 </div>
 
