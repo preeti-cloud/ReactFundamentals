@@ -58,6 +58,13 @@ handleDelete =(childId ) =>{
 
   this.setState({childArray :updatedChildArray });
 }
+
+noDataMessage (){
+  if (this. state. childArray . length ===0)
+  return <p>
+   No data present.
+  </p>;
+}
   render() {
     return (
       <div>
@@ -117,8 +124,11 @@ handleDelete =(childId ) =>{
     <h3 className ="header mt-5">
        Rendering Child Component, using props and children attributes , passing data and event handling from child to parent
     </h3>
+
+    {this.noDataMessage() }
     {this.state.childArray.map (
       child => <Child key ={child.id}
+      array = {this.state.childArray }
       value = {child.value}
       id= {child.id}
       onDelete ={this.handleDelete}>
