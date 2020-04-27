@@ -1,18 +1,17 @@
 import React, {Component } from 'react';
 import {render } from 'react-dom';
 
-class ChildHeader extends Component {
+// Stateless Functional Component 
 
-  render(){
+const ChildHeader =(props ) =>{
     return(
     <React.Fragment>
         <h5 className ="font-italic ">
-            Total child components : {this.props.totalCount }
+            Total child components : {props.totalCount }
         </h5>
     </React.Fragment>
     );
   }
-}
 
 export default ChildHeader ;
 
