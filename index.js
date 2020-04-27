@@ -61,7 +61,7 @@ handleDelete =(childId ) =>{
   render() {
     return (
       <div>
-        <h1>React Fundamentals Hands - on</h1>
+        <h1>React Tutorial Hands - on</h1>
 <div> 
     <h3 className="header mt-5">
     Dynamic state updation, dynamic style updation, event handler & binding demo
@@ -114,7 +114,7 @@ handleDelete =(childId ) =>{
 </div>
 
 <div>
-    <h3 className ="header mt-3">
+    <h3 className ="header mt-5">
        Rendering Child Component, using props and children attributes , passing data and event handling from child to parent
     </h3>
     {this.state.childArray.map (
