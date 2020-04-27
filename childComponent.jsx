@@ -5,18 +5,21 @@ import ChildHeader from './childHeader';
 class Child extends Component {
 
   render(){
-    return(
+
+    // Argument destructuring demo below
+    const {array, children ,value , onDelete ,id } =this.props;
+    return (
       <div  className ="lead">
 
-      <ChildHeader totalCount = {this.props.array.length }/>
+      <ChildHeader totalCount = {array.length }/>
       <span  className ="font-bold ">
-          {this. props. children}
+          {children}
        </ span>
          I'm child component with rank - 
-         {this. props. value} .
+         {value} .
 
          <button className ="btn-danger btn btn-sm ml-2 " 
-         onClick= {() =>this.props.onDelete(this.props.id)}>
+         onClick= {() =>onDelete(id)}>
          Delete
          </button>
       </div>
